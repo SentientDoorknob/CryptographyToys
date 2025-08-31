@@ -1,12 +1,11 @@
 import random
 
-from Encoders import *
 from Encoders.Ciphers.AffineEncoder import AffineEncoder
 from Encoders.Ciphers.CaesarEncoder import CaesarEncoder
 from Encoders.Ciphers.HillEncoder import HillEncoder
-from Encoders.Ciphers.SubstitutionEncoder import SubstitutionEncoder
 from Encoders.Ciphers.NihilistEncoder import NihilistEncoder
 from Encoders.Ciphers.PermutationEncoder import PermutationEncoder
+from Encoders.Ciphers.SubstitutionEncoder import SubstitutionEncoder
 from Encoders.Ciphers.VignereEncoder import VignereEncoder
 
 LEN = 250

@@ -75,7 +75,7 @@ def OpenInput(module, loop=None):
 
     def Help():
         import Interface.HelpKeywordInput
-        KeywordInputHelp.OpenHelp()
+        HelpKeywordInput.OpenHelp()
 
     def Exit(success):
         module.AfterCipherInput(text_area.get("1.0", "end"), placeholder.get(), keyword.get(), True, success, root)

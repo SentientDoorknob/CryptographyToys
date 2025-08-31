@@ -73,7 +73,7 @@ def OpenInput(loop=None):
     def Exit(success):
         from Tools import HillClimber
         text = text_area.get("1.0", "end")    
-        StochasticMain.AfterCipherInput(text, iterations_slider.get(), threshold_slider.get(), success, root)
+        HillClimber.AfterCipherInput(text, iterations_slider.get(), threshold_slider.get(), success, root)
 
 
     root.bind("<Return>", lambda x: Exit(True))

@@ -95,7 +95,7 @@ def OpenResult(result, loop=None):
         if not is_exiting:
             root.destroy()
             from Tools import Generator
-            GeneratorMain.Generate(gen_new=True)
+            Generator.Generate(gen_new=True)
 
     def switch_text_type():
         global is_ciphertext
@@ -115,7 +115,7 @@ def OpenResult(result, loop=None):
         bools = []
         for var in vars:
             bools.append(var.get())
-        EncoderEnum.encoder_includes = bools;
+        EncoderEnum.encoder_includes = bools
 
     exit_button = tk.Button(buttons, text="Back", font=bold_font, relief="flat", borderwidth=1, command=exit_function)
     exit_button.grid(row=0, column=13, padx=3, pady=3, sticky="nsew")

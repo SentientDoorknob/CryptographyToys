@@ -21,7 +21,7 @@ def OpenCipherInput(loop=None, gen_new=False):
     global global_result
 
     if global_result is None or gen_new:
-        Interface.HillClimbingInput.OpenInput(loop)
+        Interface.InputSubstitution.OpenInput(loop)
         return
 
     global_result.Display(loop)

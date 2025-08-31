@@ -1,13 +1,11 @@
-import time
 import sys
 
 import Interface.InputCipher
-from Decoders.Vignere.VignereDecoder import *
 from Decoders.Affine.AffineDecoder import *
-from Decoders.Permutation.PermutationDecoder import *
 from Decoders.Hill.HillDecoder import *
 from Decoders.Nihilst.NihilstDecoder import *
-from Utility.Tools import *
+from Decoders.Permutation.PermutationDecoder import *
+from Decoders.Vignere.VignereDecoder import *
 
 ciphers = {"Vignere Cipher": VignereDecoder(),
            "Affine Cipher": AffineDecoder(),
@@ -34,7 +32,7 @@ def OpenCipherInput(loop=None, gen_new=False):
     global global_result
 
     if global_result is None or gen_new:
-        Interface.CipherInput.OpenInput(sys.modules[__name__], loop)
+        Interface.InputCipher.OpenInput(sys.modules[__name__], loop)
         return
 
     global_result.Display(loop)

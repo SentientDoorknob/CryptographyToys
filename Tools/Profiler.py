@@ -1,6 +1,6 @@
 import Interface.DisplayProfile
 import Interface.InputText
-from Profiler.Analyser import *
+from Profiler.Analyser import Analyse
 import sys
 
 global_result = None
@@ -11,14 +11,14 @@ def OnTextInput(success, text, loop):
 
     global global_result
     global_result = Analyse(text, no_bigrams)
-    Interface.AnalysisDisplay.ShowResult(global_result, loop)
+    Interface.DisplayProfile.ShowResult(global_result, loop)
 
 
 def OpenTextInput(loop=None, gen_new=False):
     global global_result
 
     if not global_result or gen_new:
-        Interface.TextInput.OpenInput(sys.modules[__name__], loop)
+        Interface.InputText.OpenInput(sys.modules[__name__], loop)
         return
 
-    Interface.AnalysisDisplay.ShowResult(global_result, loop)
+    Interface.DisplayProfile.ShowResult(global_result, loop)

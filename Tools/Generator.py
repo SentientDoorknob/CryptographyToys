@@ -12,7 +12,7 @@ def Generate(loop=None, gen_new=False):
         result = encoder.GetPracticeProblem()
         global_result = result
 
-    Interface.CiphertextDisplay.OpenResult(global_result, loop)
+    Interface.DisplayProblem.OpenResult(global_result, loop)
 
 
 if __name__ == "__main__":

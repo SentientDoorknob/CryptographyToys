@@ -1,11 +1,7 @@
-import math
+import random
 
 from Encoders.CipherEncoder import CipherEncoder
-from Encoders.CipherResult import CipherResult
-from Utility.Tools import *
 from Utility.LinearAlgebra import *
-import Text.TextGrabber as text
-import random
 
 
 class HillEncoder(CipherEncoder):

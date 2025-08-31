@@ -1,5 +1,3 @@
-import math
-
 from Encoders.CipherEncoder import CipherEncoder
 from Utility.Tools import *
 

@@ -102,12 +102,12 @@ class VignereResult:
 
         def exit_function():
             from Tools import Decoder
-            DecoderMain.OpenCipherInput(root, gen_new=True)
+            Decoder.OpenCipherInput(root, gen_new=True)
 
         def retry_function():
             self.keyword = keyword_input.get()
             from Tools import Decoder
-            dec = DecoderMain.ciphers[str(self)]
+            dec = Decoder.ciphers[str(self)]
             dec.ReEvaluate(self, root)
 
         exit_button = tk.Button(buttons, text="Back", font=bold_font, relief="flat", borderwidth=1,

@@ -1,7 +1,7 @@
-from Utility.Tools import *
 from Decoders.Affine.AffineResult import *
 
 
+# noinspection PyMethodMayBeStatic
 class AffineDecoder:
 
     """

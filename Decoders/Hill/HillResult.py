@@ -104,13 +104,13 @@ class HillResult:
 
         def exit_function():
             from Tools import Decoder
-            DecoderMain.OpenCipherInput(root, gen_new=True)
+            Decoder.OpenCipherInput(root, gen_new=True)
 
         def retry_function():
             t = keyword_input.get().split(" ")
             self.thhe = [[int(t[0]), int(t[1])], [int(t[2]), int(t[3])]]
             from Tools import Decoder
-            dec = DecoderMain.ciphers[str(self)]
+            dec = Decoder.ciphers[str(self)]
             dec.ReEvaluate(self, root)
 
         def swap_function():
@@ -118,7 +118,7 @@ class HillResult:
             self.thhe = LinearAlgebra.SetColumn(self.thhe, second, 0)
             self.thhe = LinearAlgebra.SetColumn(self.thhe, first, 1)
             from Tools import Decoder
-            dec = DecoderMain.ciphers[str(self)]
+            dec = Decoder.ciphers[str(self)]
             dec.ReEvaluate(self, root)
 
         exit_button = tk.Button(buttons, text="Back", font=bold_font, relief="flat", borderwidth=1,

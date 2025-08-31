@@ -63,7 +63,7 @@ def OpenInput(loop=None):
         images.append(image)
         tool_button = tk.Button(tool_selection, text=text, relief="flat", font=bold_font, image=image, compound="top", command=lambda f=func: OpenTool(f, root))
         tool_button.grid(row=y, column=x, sticky="NESW")
-        buttons.append(tool_button);
+        buttons.append(tool_button)
 
     buttons = tk.Frame(root, bg=info_color, borderwidth=1, relief="solid")
     buttons.grid(row=19, column=0, columnspan=14, rowspan=1, sticky="NESW")
