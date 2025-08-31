@@ -7,11 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="Fixed all the weird imports, yw future me (:">
-      <change afterPath="$PROJECT_DIR$/Interface/ToolConverter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Formatter.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="Added formatter to tool slection">
+      <change afterPath="$PROJECT_DIR$/Interface/ToolFormatter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/ToolConverter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/Formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Formatter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MainFile">
+  <component name="RunManager" selected="Python.MainFileNoRun">
     <configuration name="MainFile" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" focusToolWindowBeforeRun="true" nameIsGenerated="true">
       <module name="CryptographyToys" />
       <option name="ENV_FILES" value="" />
@@ -172,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756634052009</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added formatter to tool slection">
+      <option name="closed" value="true" />
+      <created>1756636119019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756636119019</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +197,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I forgot this was here...&#10;Literally Everything?" />
     <MESSAGE value="Fixed all the weird imports, yw future me (:" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed all the weird imports, yw future me (:" />
+    <MESSAGE value="Added formatter to tool slection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added formatter to tool slection" />
   </component>
 </project>
