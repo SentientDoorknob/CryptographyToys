@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/CryptographyToys.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Affine/AffineDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Affine/AffineResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Hill/HillDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Hill/HillResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/CipherEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/CipherResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/AffineEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/CaesarEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/NihilistEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/PermutationEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/SubstitutionEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/VignereEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icons/decode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icons/encode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icons/generate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icons/magnifier.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icons/question.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Icons/swap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/DisplayEncoding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/DisplayProblem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/DisplayProfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/HelpKeywordInput.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/InputCipher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/InputSubstitution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/InputText.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/SelectTool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profiler/Analyser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profiler/TextAnalysisResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/TextGrabber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/aliceinwonderland.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/doriangrey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/frankenstein.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/greatgatsby.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/jeeves.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/pride.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/romeoandjuliet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/simplesabotage.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Decoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/HillClimber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Profiler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utility/Digram.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utility/EncoderEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utility/LinearAlgebra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utility/Tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utility/TrigramFrequencies.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zmHNSayNpB6DXrWJPJHTNfyKpy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.MainFile.executor": "Run",
+    "Python.MainFileNoRun.executor": "Run",
+    "Python.Test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/justa/Documents/Coding/Python/CryptographyToys/Test.py",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Tools" />
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Icons" />
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys" />
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface\Icons" />
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.MainFile">
+    <configuration name="MainFile" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" focusToolWindowBeforeRun="true" nameIsGenerated="true">
+      <module name="CryptographyToys" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainFile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainFileNoRun" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false">
+      <module name="CryptographyToys" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainFile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" focusToolWindowBeforeRun="true">
+      <module name="CryptographyToys" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.MainFile" />
+      <item itemvalue="Python.MainFileNoRun" />
+      <item itemvalue="Python.Test" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="" />
+      <created>1752329287783</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752329287783</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
