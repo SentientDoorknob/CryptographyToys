@@ -1,12 +1,13 @@
 import Interface.InputCipher
 import Interface.SelectTool
-from Tools import HillClimber, Generator, Decoder, Encoder, Profiler
+from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter
 
 main_functions = [("Encode", Encoder.OpenCipherInput, "encode.png"),
                   ("Decode", Decoder.OpenCipherInput, "decode.png"),
                   ("Practice Problems", Generator.Generate, "generate.png"),
                   ("Cipher Profiler", Profiler.OpenTextInput, "magnifier.png"),
-                  ("Substitution", HillClimber.OpenCipherInput, "swap.png")]
+                  ("Substitution", HillClimber.OpenCipherInput, "swap.png"),
+                  ("Formatter", Formatter.OpenTool, "format.png"),]
 
 
 def OpenInput(loop=None):

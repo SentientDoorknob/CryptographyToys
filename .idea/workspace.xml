@@ -1,76 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CryptographyToys.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Affine/AffineDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Affine/AffineResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Hill/HillDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Hill/HillResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/CipherEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/CipherResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/AffineEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/CaesarEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/NihilistEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/PermutationEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/SubstitutionEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/VignereEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icons/decode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icons/encode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icons/generate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icons/magnifier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icons/question.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Icons/swap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/DisplayEncoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/DisplayProblem.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/DisplayProfile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/HelpKeywordInput.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/InputCipher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/InputSubstitution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/InputText.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/SelectTool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profiler/Analyser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profiler/TextAnalysisResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/TextGrabber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/aliceinwonderland.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/doriangrey.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/frankenstein.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/greatgatsby.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/jeeves.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/pride.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/romeoandjuliet.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text/simplesabotage.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/HillClimber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Profiler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/Digram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/EncoderEnum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/LinearAlgebra.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/Tools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/TrigramFrequencies.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="Fixed all the weird imports, yw future me (:">
+      <change afterPath="$PROJECT_DIR$/Interface/ToolConverter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -104,6 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/justa/Documents/Coding/Python/CryptographyToys/Test.py",
+    "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -211,6 +156,23 @@
       <option name="presentableId" value="Default" />
       <updated>1752329287783</updated>
     </task>
+    <task id="LOCAL-00001" summary="I forgot this was here...&#10;Literally Everything?">
+      <option name="closed" value="true" />
+      <created>1756633238148</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756633238148</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed all the weird imports, yw future me (:">
+      <option name="closed" value="true" />
+      <created>1756634052009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756634052009</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,5 +185,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I forgot this was here...&#10;Literally Everything?" />
+    <MESSAGE value="Fixed all the weird imports, yw future me (:" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed all the weird imports, yw future me (:" />
   </component>
 </project>
