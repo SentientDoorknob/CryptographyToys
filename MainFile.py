@@ -1,6 +1,6 @@
 import Interface.InputCipher
 import Interface.SelectTool
-from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter, Splitter
+from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter, Splitter, Merger
 
 main_functions = [("Encode", lambda loop: Encoder.OpenCipherInput(Encoder, loop), "encode.png"),
                   ("Decode", lambda loop: Decoder.OpenCipherInput(Decoder, loop), "decode.png"),
@@ -8,7 +8,8 @@ main_functions = [("Encode", lambda loop: Encoder.OpenCipherInput(Encoder, loop)
                   ("Cipher Profiler", lambda loop: Profiler.OpenTextInput(Profiler, loop), "magnifier.png"),
                   ("Substitution", HillClimber.OpenCipherInput, "swap.png"),
                   ("Formatter", Formatter.OpenTool, "format.png"),
-                  ("Splitter", lambda loop: Splitter.OpenCosetInterface(Splitter, loop), "split.png")]
+                  ("Splitter", lambda loop: Splitter.OpenCosetInterface(Splitter, loop), "split.png"),
+                  ("Merger", Merger.OpenInterleaver, "merge.png"), ]
 
 
 def OpenInput(loop=None):

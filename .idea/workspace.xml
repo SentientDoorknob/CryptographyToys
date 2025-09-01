@@ -7,26 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="i forgor the icon">
-      <change afterPath="$PROJECT_DIR$/Icons/split.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interface/ToolSplitter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Splitter.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added the splitter&#10;idk i just kinda did it">
+      <change afterPath="$PROJECT_DIR$/Interface/ToolMerger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Merger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Affine/AffineResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Affine/AffineResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Hill/HillResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Hill/HillResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Nihilst/NihilstResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Permutation/PermutationResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Decoders/Vignere/VignereResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface/DisplayEncoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/DisplayEncoding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface/DisplayProfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/DisplayProfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/Decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/Encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Encoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/Profiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Profiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/Tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/Tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756667169745</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added the splitter&#10;idk i just kinda did it">
+      <option name="closed" value="true" />
+      <created>1756743597046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756743597046</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +224,7 @@
     <MESSAGE value="Added formatter to tool slection" />
     <MESSAGE value="the formatter works now" />
     <MESSAGE value="i forgor the icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="i forgor the icon" />
+    <MESSAGE value="added the splitter&#10;idk i just kinda did it" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the splitter&#10;idk i just kinda did it" />
   </component>
 </project>
