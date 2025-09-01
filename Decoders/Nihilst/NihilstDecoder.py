@@ -1,5 +1,3 @@
-import math
-
 from Decoders.Nihilst.NihilstResult import *
 
 """
@@ -368,7 +366,7 @@ class NihilistDecoder:
 
     def GetBestResult(self, results):
         minDifference = 10
-        bestResult = None
+        bestResult = NihilistResult([99, 99, 99], [[99, 99, 99], [98, 98, 98]], "No valid solution.", "No valid solution.")
 
         for result in results:
             ioc = IndexOfCoincidence(result.plaintext)

@@ -50,14 +50,12 @@ def OpenInput(loop=None):
         tool_selection.grid_rowconfigure(i, weight=1, minsize=18/20*screen_height//tool_rows)
 
     def OpenTool(func, loop):
-        print("BUTTON CLICKED")
         func(loop)
         return
 
     import MainFile
     buttons = []; images = []; functions = []
     for i, (text, func, image_path) in enumerate(MainFile.main_functions):
-        print(f"BUTTON {i}")
         x, y = i % tool_columns, i // tool_columns
         image = tk.PhotoImage(file=fr"Icons\{image_path}").subsample(3, 3)
         images.append(image)

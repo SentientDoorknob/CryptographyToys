@@ -104,7 +104,7 @@ class HillResult:
 
         def exit_function():
             from Tools import Decoder
-            Decoder.OpenCipherInput(root, gen_new=True)
+            Decoder.OpenCipherInput(Decoder, root, gen_new=True)
 
         def retry_function():
             t = keyword_input.get().split(" ")

@@ -32,6 +32,7 @@ class VignereDecoder:
         results = [self.TryKeywordLength(ciphertext, i) for i in range(1, VignereDecoder.MAX_KEYWORD_LENGTH)]
         print(results)
         threshold = list(filter(lambda x: x < VignereDecoder.VIGNERE_THRESHOLD, results))
+        if len(threshold) == 0: return 1
         return results.index(threshold[0]) + 1
 
     # Returns KEY. For each coset, runs X2 analysis - see method.

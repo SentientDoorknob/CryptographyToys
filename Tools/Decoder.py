@@ -1,5 +1,3 @@
-import sys
-
 import Interface.InputCipher
 from Decoders.Affine.AffineDecoder import *
 from Decoders.Hill.HillDecoder import *
@@ -28,16 +26,11 @@ def AfterCipherInput(text, cipher_index, textbox, use_keyword, success, loop):
     result.Display(loop)
 
 
-def OpenCipherInput(loop=None, gen_new=False):
+def OpenCipherInput(module_name, loop=None, gen_new=False):
     global global_result
 
     if global_result is None or gen_new:
-        Interface.InputCipher.OpenInput(sys.modules[__name__], loop)
+        Interface.InputCipher.OpenInput(module_name, loop)
         return
 
     global_result.Display(loop)
-
-
-
-if __name__ == "__main__":
-    OpenCipherInput()

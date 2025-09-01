@@ -1,13 +1,14 @@
 import Interface.InputCipher
 import Interface.SelectTool
-from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter
+from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter, Splitter
 
-main_functions = [("Encode", Encoder.OpenCipherInput, "encode.png"),
-                  ("Decode", Decoder.OpenCipherInput, "decode.png"),
+main_functions = [("Encode", lambda loop: Encoder.OpenCipherInput(Encoder, loop), "encode.png"),
+                  ("Decode", lambda loop: Decoder.OpenCipherInput(Decoder, loop), "decode.png"),
                   ("Practice Problems", Generator.Generate, "generate.png"),
-                  ("Cipher Profiler", Profiler.OpenTextInput, "magnifier.png"),
+                  ("Cipher Profiler", lambda loop: Profiler.OpenTextInput(Profiler, loop), "magnifier.png"),
                   ("Substitution", HillClimber.OpenCipherInput, "swap.png"),
-                  ("Formatter", Formatter.OpenTool, "format.png"),]
+                  ("Formatter", Formatter.OpenTool, "format.png"),
+                  ("Splitter", lambda loop: Splitter.OpenCosetInterface(Splitter, loop), "split.png")]
 
 
 def OpenInput(loop=None):
@@ -20,6 +21,7 @@ def ClearGlobals():
     Generator.global_result = None
     Profiler.global_result = None
     HillClimber.global_result = None
+    Splitter.global_result = None
     
 
 

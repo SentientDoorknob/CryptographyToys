@@ -102,7 +102,7 @@ class VignereResult:
 
         def exit_function():
             from Tools import Decoder
-            Decoder.OpenCipherInput(root, gen_new=True)
+            Decoder.OpenCipherInput(Decoder, root, gen_new=True)
 
         def retry_function():
             self.keyword = keyword_input.get()

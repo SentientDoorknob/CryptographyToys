@@ -74,7 +74,7 @@ def OpenResult(result, loop=None):
 
     def exit_function():
         from Tools import Encoder
-        Encoder.OpenCipherInput(loop=root, gen_new=True)
+        Encoder.OpenCipherInput(Encoder, loop=root, gen_new=True)
 
     def switch_text_type():
         global is_ciphertext

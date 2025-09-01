@@ -7,11 +7,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="Added formatter to tool slection">
-      <change afterPath="$PROJECT_DIR$/Interface/ToolFormatter.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="i forgor the icon">
+      <change afterPath="$PROJECT_DIR$/Icons/split.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interface/ToolSplitter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/Splitter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface/ToolConverter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/Formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Affine/AffineResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Affine/AffineResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Hill/HillResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Hill/HillResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Nihilst/NihilstResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Permutation/PermutationResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Vignere/VignereResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/DisplayEncoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/DisplayEncoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/DisplayProfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/DisplayProfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/Decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/Encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Encoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/Profiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Profiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility/Tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/Tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,14 +73,14 @@
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Tools" />
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Icons" />
+      <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Tools" />
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys" />
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface\Icons" />
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MainFileNoRun">
+  <component name="RunManager" selected="Python.MainFile">
     <configuration name="MainFile" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" focusToolWindowBeforeRun="true" nameIsGenerated="true">
       <module name="CryptographyToys" />
       <option name="ENV_FILES" value="" />
@@ -180,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756636119019</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="the formatter works now">
+      <option name="closed" value="true" />
+      <created>1756667111475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756667111475</updated>
+    </task>
+    <task id="LOCAL-00005" summary="i forgor the icon">
+      <option name="closed" value="true" />
+      <created>1756667169745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756667169745</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +229,8 @@
     <MESSAGE value="I forgot this was here...&#10;Literally Everything?" />
     <MESSAGE value="Fixed all the weird imports, yw future me (:" />
     <MESSAGE value="Added formatter to tool slection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added formatter to tool slection" />
+    <MESSAGE value="the formatter works now" />
+    <MESSAGE value="i forgor the icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="i forgor the icon" />
   </component>
 </project>

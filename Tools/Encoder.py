@@ -1,5 +1,3 @@
-import sys
-
 import Interface.DisplayEncoding
 import Interface.InputCipher
 from Encoders.Ciphers.AffineEncoder import *
@@ -35,15 +33,11 @@ def AfterCipherInput(text, cipher_index, keyword, use_keyword, success, loop):
     Interface.DisplayEncoding.OpenResult(result, loop)
 
 
-def OpenCipherInput(loop=None, gen_new=False):
+def OpenCipherInput(module_name, loop=None, gen_new=False):
     global global_result
 
     if global_result is None or gen_new:
-        Interface.InputCipher.OpenInput(sys.modules[__name__], loop)
+        Interface.InputCipher.OpenInput(module_name, loop)
         return
 
     Interface.DisplayEncoding.OpenResult(global_result, loop)
-
-
-if __name__ == "__main__":
-    OpenCipherInput()

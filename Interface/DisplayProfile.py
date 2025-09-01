@@ -180,7 +180,7 @@ def ShowResult(result, loop=None):
     set_text(result.text)
 
     def Back():
-        Profiler.OpenTextInput(gen_new=True, loop=root)
+        Profiler.OpenTextInput(Profiler, gen_new=True, loop=root)
 
     back_button = tk.Button(buttons, text="Back", font=bold_font, command=lambda: Back(), relief="flat")
     back_button.grid(row=0, column=13, padx=3, pady=3, sticky="nsew")

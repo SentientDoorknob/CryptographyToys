@@ -115,7 +115,7 @@ class NihilistResult:
 
         def exit_function():
             from Tools import Decoder
-            Decoder.OpenCipherInput(root, gen_new=True)
+            Decoder.OpenCipherInput(Decoder, root, gen_new=True)
 
         def retry_function():
             self.keyword = [int(x) for x in keyword_input.get().split(" ")]

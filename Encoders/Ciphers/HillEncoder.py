@@ -1,5 +1,3 @@
-import random
-
 from Encoders.CipherEncoder import CipherEncoder
 from Utility.LinearAlgebra import *
 

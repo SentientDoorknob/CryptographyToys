@@ -70,6 +70,9 @@ def DecimalFrequency(text):
 
 def IndexOfCoincidence(text):
     length = len(text)
+    
+    if length < 2: length = 2
+    
     length_mult = length * (length - 1)
     absolutes = AbsoluteFrequency(StringFormat(text))
 
