@@ -7,11 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added the splitter&#10;idk i just kinda did it">
-      <change afterPath="$PROJECT_DIR$/Interface/ToolMerger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/Merger.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added the merger&#10;idk i just did it">
+      <change afterPath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tools/PolyClimber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/InputSubstitution.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/InputSubstitution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/HillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/HillClimber.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +69,7 @@
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MainFile">
+  <component name="RunManager" selected="Python.Test">
     <configuration name="MainFile" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" focusToolWindowBeforeRun="true" nameIsGenerated="true">
       <module name="CryptographyToys" />
       <option name="ENV_FILES" value="" />
@@ -204,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756743597046</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added the merger&#10;idk i just did it">
+      <option name="closed" value="true" />
+      <created>1756746785302</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756746785313</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +237,7 @@
     <MESSAGE value="the formatter works now" />
     <MESSAGE value="i forgor the icon" />
     <MESSAGE value="added the splitter&#10;idk i just kinda did it" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the splitter&#10;idk i just kinda did it" />
+    <MESSAGE value="added the merger&#10;idk i just did it" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the merger&#10;idk i just did it" />
   </component>
 </project>

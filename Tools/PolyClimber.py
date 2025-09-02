@@ -1,10 +1,8 @@
-import time
-import sys
+from Decoders.PolySubstitution.PolySubstitutionDecoder import PolySubstitutionDecoder
 import Interface.InputSubstitution
-from Decoders.Substitution.SubstitutionDecoder import SubstitutionDecoder
 
-global_result = None
-decoder = SubstitutionDecoder()
+global_result=None
+decoder = PolySubstitutionDecoder()
 
 def AfterCipherInput(text, max_iterations, threshold, success, loop):
     global global_result
@@ -17,7 +15,7 @@ def AfterCipherInput(text, max_iterations, threshold, success, loop):
     global_result.Display(loop)
 
 
-def OpenCipherInput(module, loop=None, gen_new=False):  
+def OpenCipherInput(module, loop=None, gen_new=True):
     global global_result
 
     if global_result is None or gen_new:
@@ -25,8 +23,3 @@ def OpenCipherInput(module, loop=None, gen_new=False):
         return
 
     global_result.Display(loop)
-
-
-
-if __name__ == "__main__":
-    OpenCipherInput()

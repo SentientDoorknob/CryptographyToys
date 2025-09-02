@@ -1,6 +1,6 @@
 import tkinter as tk
 
-def OpenInput(loop=None):
+def OpenInput(module, loop=None):
     if loop:
         loop.destroy()
 
@@ -71,9 +71,8 @@ def OpenInput(loop=None):
     iterations_slider.set(10000)
 
     def Exit(success):
-        from Tools import HillClimber
         text = text_area.get("1.0", "end")    
-        HillClimber.AfterCipherInput(text, iterations_slider.get(), threshold_slider.get(), success, root)
+        module.AfterCipherInput(text, iterations_slider.get(), threshold_slider.get(), success, root)
 
 
     root.bind("<Return>", lambda x: Exit(True))

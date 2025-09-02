@@ -5,6 +5,8 @@ import Text.TextGrabber as Text
 from Encoders.Ciphers.SubstitutionEncoder import SubstitutionEncoder
 from Encoders.Ciphers.AffineEncoder import AffineEncoder
 from Decoders.Affine.AffineDecoder import AffineDecoder
+from Encoders.Ciphers.VignereEncoder import VignereEncoder
+from Decoders.PolySubstitution.PolySubstitutionDecoder import PolySubstitutionDecoder
 import math
 
 """MAX_ITERATIONS = 10000
@@ -106,6 +108,21 @@ if __name__ == "":
 if __name__ == "__main__":
     text = Text.GetRandomParagraph(1000)
     StochasticAlgorithm(text)    """
+
+if __name__ == "__main__":
+    encoder = VignereEncoder(100)
+    decoder = PolySubstitutionDecoder()
+    
+    problem = encoder.GetPracticeProblem()
+    ciphertext = problem.ciphertext
+    keylen = len(problem.keyword)
+    print(ciphertext[:50])
+    
+    plaintext, keys, min_fitness, big_counter = decoder.StochasticHillClimb(ciphertext, keylen, 10000, threshold=0.015)
+    print(plaintext)
+    print(keys)
+    print(min_fitness)
+    print(big_counter)
         
         
         
