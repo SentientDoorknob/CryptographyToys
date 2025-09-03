@@ -107,7 +107,7 @@ class SubstitutionResult:
 
         def exit_function():
             from Tools import HillClimber
-            HillClimber.OpenCipherInput(root, gen_new=True)
+            HillClimber.OpenCipherInput(HillClimber, root, gen_new=True)
 
         def retry_function():
             from Decoders.Substitution.SubstitutionDecoder import SubstitutionDecoder

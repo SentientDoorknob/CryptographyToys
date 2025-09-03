@@ -1,6 +1,6 @@
 import Interface.InputCipher
 import Interface.SelectTool
-from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter, Splitter, Merger, PolyClimber
+from Tools import HillClimber, Generator, Decoder, Encoder, Profiler, Formatter, Splitter, Merger
 
 main_functions = [("Encode", lambda loop: Encoder.OpenCipherInput(Encoder, loop), "encode.png"),
                   ("Decode", lambda loop: Decoder.OpenCipherInput(Decoder, loop), "decode.png"),
