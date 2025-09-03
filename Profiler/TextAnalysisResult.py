@@ -23,6 +23,7 @@ class TextAnalysisResult:
     substitutionFitness = 0
     englishFitness = 0
     letterFrequencies = [0 for i in range(26)]
+    periodLength = 0
     commonBigrams = []
     commonMonograms = []
 

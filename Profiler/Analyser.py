@@ -1,6 +1,8 @@
 from Profiler.TextAnalysisResult import *
+from Decoders.Vignere.VignereDecoder import VignereDecoder
 from Utility.Tools import *
 
+vignere_decoder = VignereDecoder()
 
 def Analyse(text, no_bigrams):
     text = StringFormat(text)
@@ -17,4 +19,5 @@ def Analyse(text, no_bigrams):
     result.substitutionFitness = round(SubstitutionFitness(text), 4)
     result.englishFitness = round(SubstitutionFitness(text), 4)
     result.commonMonograms = CommonMonograms(text, no_bigrams)
+    result.periodLength = vignere_decoder.GetKeywordLength(text)
     return result

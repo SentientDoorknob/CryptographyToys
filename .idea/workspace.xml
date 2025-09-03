@@ -7,15 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added the merger&#10;idk i just did it">
-      <change afterPath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionDecoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/PolyClimber.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="failed polysubstitution decoder&#10;maybe revisit later?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interface/InputSubstitution.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/InputSubstitution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/HillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/HillClimber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/DisplayProfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/DisplayProfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profiler/Analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profiler/Analyser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profiler/TextAnalysisResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profiler/TextAnalysisResult.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.MainFile.executor": "Run",
-    "Python.MainFileNoRun.executor": "Run",
-    "Python.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/justa/Documents/Coding/Python/CryptographyToys/Test.py",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.MainFile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainFileNoRun.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/justa/Documents/Coding/Python/CryptographyToys/Test.py&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
@@ -69,7 +65,7 @@
       <recent name="C:\Users\justa\Documents\Coding\Python\CryptographyToys\Interface" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Test">
+  <component name="RunManager" selected="Python.MainFileNoRun">
     <configuration name="MainFile" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" focusToolWindowBeforeRun="true" nameIsGenerated="true">
       <module name="CryptographyToys" />
       <option name="ENV_FILES" value="" />
@@ -216,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756746785313</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="failed polysubstitution decoder&#10;maybe revisit later?">
+      <option name="closed" value="true" />
+      <created>1756831917049</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756831917049</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +242,7 @@
     <MESSAGE value="i forgor the icon" />
     <MESSAGE value="added the splitter&#10;idk i just kinda did it" />
     <MESSAGE value="added the merger&#10;idk i just did it" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the merger&#10;idk i just did it" />
+    <MESSAGE value="failed polysubstitution decoder&#10;maybe revisit later?" />
+    <option name="LAST_COMMIT_MESSAGE" value="failed polysubstitution decoder&#10;maybe revisit later?" />
   </component>
 </project>

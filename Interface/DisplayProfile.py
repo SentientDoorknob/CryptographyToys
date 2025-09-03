@@ -92,6 +92,7 @@ def ShowResult(result, loop=None):
         "Cosine Entropy": result.cosineFitness,
         "Sub. Fitness": result.substitutionFitness,
         "Eng. Fitness": result.englishFitness,
+        "Period Length": result.periodLength,
     }
 
     stats_num = len(display_stats)
