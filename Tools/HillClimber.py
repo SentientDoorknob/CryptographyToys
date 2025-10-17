@@ -1,5 +1,4 @@
 import time
-import sys
 import Interface.InputSubstitution
 from Decoders.Substitution.SubstitutionDecoder import SubstitutionDecoder
 

@@ -7,9 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added period length stat">
-      <change beforePath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/ToolSplitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/ToolSplitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/HillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/HillClimber.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +76,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="false" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainFile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -98,8 +99,8 @@
       <option name="SDK_NAME" value="Python 3.12" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="false" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainFile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -226,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756889150161</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)">
+      <option name="closed" value="true" />
+      <created>1756889472178</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756889472178</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +259,7 @@
     <MESSAGE value="added the merger&#10;idk i just did it" />
     <MESSAGE value="failed polysubstitution decoder&#10;maybe revisit later?" />
     <MESSAGE value="added period length stat" />
-    <option name="LAST_COMMIT_MESSAGE" value="added period length stat" />
+    <MESSAGE value="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)" />
   </component>
 </project>
