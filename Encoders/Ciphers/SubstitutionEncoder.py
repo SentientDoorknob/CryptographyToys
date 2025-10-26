@@ -9,6 +9,7 @@ class SubstitutionEncoder(CipherEncoder):
         self.name = "Substitution Cipher"
 
     def Encode(self, plaintext, key):
+        original = plaintext
         plaintext = plaintext.upper()
         key = key.lower()
         
@@ -18,7 +19,7 @@ class SubstitutionEncoder(CipherEncoder):
         for i in range(26):
             plaintext = plaintext.replace(chr(65 + i), key[i])
             
-        return plaintext.lower(), key
+        return original, plaintext.lower(), key
 
     def ConvertKey(self, key):
         alphabet = [chr(97 + x) for x in range(26)]

@@ -7,10 +7,11 @@ from Encoders.Ciphers.NihilistEncoder import NihilistEncoder
 from Encoders.Ciphers.PermutationEncoder import PermutationEncoder
 from Encoders.Ciphers.SubstitutionEncoder import SubstitutionEncoder
 from Encoders.Ciphers.VignereEncoder import VignereEncoder
+from Encoders.Ciphers.ColumnarEncoder import ColumnarEncoder
 
 LEN = 250
 
-encoders = [CaesarEncoder(LEN), VignereEncoder(LEN), SubstitutionEncoder(LEN//2), AffineEncoder(LEN), PermutationEncoder(LEN), NihilistEncoder(LEN), HillEncoder(LEN)]
+encoders = [CaesarEncoder(LEN), VignereEncoder(LEN), SubstitutionEncoder(LEN//2), AffineEncoder(LEN), PermutationEncoder(LEN), NihilistEncoder(LEN), HillEncoder(LEN), ColumnarEncoder(LEN)]
 encoder_includes = [True for i in range(len(encoders))]
 
 

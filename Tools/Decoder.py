@@ -4,12 +4,14 @@ from Decoders.Hill.HillDecoder import *
 from Decoders.Nihilst.NihilstDecoder import *
 from Decoders.Permutation.PermutationDecoder import *
 from Decoders.Vignere.VignereDecoder import *
+from Decoders.Columnar.ColumnarDecoder import *
 
 ciphers = {"Vignere Cipher": VignereDecoder(),
            "Affine Cipher": AffineDecoder(),
            "Permutation Cipher": PermutationDecoder(),
            "Hill Cipher": HillDecoder(),
-           "Nihilist Cipher": NihilistDecoder()}
+           "Nihilist Cipher": NihilistDecoder(),
+           "Columnar Cipher": ColumnarDecoder()}
 
 
 global_result = None
@@ -17,7 +19,7 @@ global_result = None
 
 def AfterCipherInput(text, cipher_index, textbox, use_keyword, success, loop):
     global global_result
-    print(f"returned to decoder main, {textbox} {use_keyword}")
+    #print(f"returned to decoder main, {textbox} {use_keyword}")
     if not success: import MainFile; MainFile.OpenInput(loop); return
 
     decoder = ciphers[cipher_index]

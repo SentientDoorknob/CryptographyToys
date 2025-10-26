@@ -7,6 +7,7 @@ from Encoders.Ciphers.NihilistEncoder import *
 from Encoders.Ciphers.PermutationEncoder import *
 from Encoders.Ciphers.SubstitutionEncoder import *
 from Encoders.Ciphers.VignereEncoder import *
+from Encoders.Ciphers.ColumnarEncoder import *
 
 length = 0
 
@@ -16,7 +17,8 @@ ciphers = {"Caesar Cipher": CaesarEncoder(length),
            "Substitution Cipher": SubstitutionEncoder(length),
            "Permutation Cipher": PermutationEncoder(length),
            "Hill Cipher": HillEncoder(length),
-           "Nihilist Cipher": NihilistEncoder(length)}
+           "Nihilist Cipher": NihilistEncoder(length),
+           "Columnar Cipher": ColumnarEncoder(length)}
 
 
 global_result = None
@@ -24,7 +26,7 @@ global_result = None
 
 def AfterCipherInput(text, cipher_index, keyword, use_keyword, success, loop):
     global global_result
-    print(f"returned to encoder main, {keyword} {use_keyword}")
+    #print(f"returned to encoder main, {keyword} {use_keyword}")
     if not success: import MainFile; MainFile.OpenInput(loop); return
     encoder = ciphers[cipher_index]
 

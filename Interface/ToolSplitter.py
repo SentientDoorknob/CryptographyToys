@@ -88,7 +88,7 @@ def OpenSplitter(text, loop):
         clipboard_text = coset_text
         
         averageIoc = averageIoc / num_cosets
-        print(averageIoc)
+        #print(averageIoc)
         averageIoc = round(averageIoc, 4)
         
         IOCvalue.set(str(averageIoc))

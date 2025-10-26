@@ -20,7 +20,7 @@ class PolySubstitutionResult:
         self.iterations = iterations
 
     def Display(self, loop):
-        print(self.iterations)
-        print(self.keywords)
-        print(self.ciphertext)
+        #print(self.iterations)
+        #print(self.keywords)
+        #print(self.ciphertext)
         loop.destroy()

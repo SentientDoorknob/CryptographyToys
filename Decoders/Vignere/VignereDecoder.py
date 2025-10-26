@@ -30,7 +30,7 @@ class VignereDecoder:
     # Returns KEYLEN. Tries lengths up to max, and gets smallest less than vignere threshold.
     def GetKeywordLength(self, ciphertext):
         results = [self.TryKeywordLength(ciphertext, i) for i in range(1, VignereDecoder.MAX_KEYWORD_LENGTH)]
-        print(results)
+        #print(results)
         threshold = list(filter(lambda x: x < VignereDecoder.VIGNERE_THRESHOLD, results))
         if len(threshold) == 0: return 1
         return results.index(threshold[0]) + 1

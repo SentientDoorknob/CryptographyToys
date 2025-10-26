@@ -7,10 +7,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)">
+    <list default="true" id="bcf5e4ae-2c75-4652-a8bc-15e501fc71fb" name="Changes" comment="added average IOC and copy to clipboard">
+      <change afterPath="$PROJECT_DIR$/Decoders/Bigraphic/BigraphicDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Columnar/ColumnarDecoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Decoders/Columnar/ColumnarResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Encoders/Ciphers/ColumnarEncoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imports/CipherDecoders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imports/CipherEncoders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imports/Ciphers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Text/dictionary.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Affine/AffineDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Affine/AffineDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Hill/HillDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Hill/HillDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Nihilst/NihilstDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Permutation/PermutationDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Permutation/PermutationDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/PolySubstitution/PolySubstitutionResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Substitution/SubstitutionDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Decoders/Vignere/VignereDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/CipherEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/CipherEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/AffineEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/AffineEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/CaesarEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/CaesarEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/HillEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/NihilistEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/NihilistEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/PermutationEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/PermutationEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/SubstitutionEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/SubstitutionEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Encoders/Ciphers/VignereEncoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Encoders/Ciphers/VignereEncoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/DisplayProfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/DisplayProfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/InputCipher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/InputCipher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/InputSubstitution.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/InputSubstitution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interface/ToolSplitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/ToolSplitter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/HillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/HillClimber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profiler/Analyser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profiler/Analyser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profiler/TextAnalysisResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profiler/TextAnalysisResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/Decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/Encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/Encoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility/EncoderEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/EncoderEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility/Tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/Tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,8 +168,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.MainFile" />
       <item itemvalue="Python.MainFileNoRun" />
+      <item itemvalue="Python.MainFile" />
       <item itemvalue="Python.Test" />
     </list>
   </component>
@@ -235,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756889472178</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added average IOC and copy to clipboard">
+      <option name="closed" value="true" />
+      <created>1760684622013</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1760684622013</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,6 +302,7 @@
     <MESSAGE value="failed polysubstitution decoder&#10;maybe revisit later?" />
     <MESSAGE value="added period length stat" />
     <MESSAGE value="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 1 word and it woks now soooo&#10;&#10;(fixed parameters of substitution back button)" />
+    <MESSAGE value="added average IOC and copy to clipboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="added average IOC and copy to clipboard" />
   </component>
 </project>

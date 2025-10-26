@@ -27,4 +27,4 @@ class NihilistEncoder(CipherEncoder):
             output_cosets[i] = [x + keychar for x in cosets[i]]
 
         output_ints = InterleaveList(output_cosets)
-        return " ".join([str(x) for x in output_ints]), key
+        return plaintext, " ".join([str(x) for x in output_ints]), key

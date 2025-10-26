@@ -44,7 +44,7 @@ class AffineDecoder:
         for character in ciphertext:
             x = Index(character)
             inverse = ModularInverse(m, 26)
-            char = (inverse * x - c) % 26
+            char = (inverse * (x - c)) % 26
             output += chr(char + 97)
 
         return output
@@ -53,9 +53,7 @@ class AffineDecoder:
     def Decode(self, ciphertext):
         ciphertext = StringFormat(ciphertext)
         et = self.GetET(ciphertext)
-        print(et)
         key = self.GetKeyWithET(et)
-        print(key)
         plaintext = self.DecryptWithKey(ciphertext, key)
 
         return AffineResult(key, plaintext, ciphertext, et)

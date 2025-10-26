@@ -21,4 +21,4 @@ class CaesarEncoder(CipherEncoder):
         return x
 
     def Encode(self, plaintext, key):
-        return ShiftLetters(plaintext, key), key
+        return plaintext, ShiftLetters(plaintext, key), key

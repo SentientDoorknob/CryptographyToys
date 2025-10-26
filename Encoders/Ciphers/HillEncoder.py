@@ -32,6 +32,9 @@ class HillEncoder(CipherEncoder):
         keyMatrix = [[key[0], key[1]], [key[2], key[3]]]
         output = ""
 
+        truncated_length = (len(plaintext) // 2) * 2
+        plaintext = plaintext[:truncated_length]
+
         determinant = LinearAlgebra._2x2Det(keyMatrix) % 26
 
         while math.gcd(determinant, 26) != 1:
@@ -52,5 +55,5 @@ class HillEncoder(CipherEncoder):
             output += chr(returnVector[0][0] + 97)
             output += chr(returnVector[1][0] + 97)
 
-        return output, keyMatrix
+        return plaintext, output, keyMatrix
 

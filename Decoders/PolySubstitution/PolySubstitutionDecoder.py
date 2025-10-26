@@ -79,7 +79,7 @@ class PolySubstitutionDecoder:
                     temperature = max(temperature * cooling_rate, 1e-4)
 
                     # Debug logging
-                    print(f"Big Counter: {big_counter} | Little Counter: {little_counter} | "
+                    #print(f"Big Counter: {big_counter} | Little Counter: {little_counter} | "
                           f"Fitness: {min_fitness:.4f} | Temp: {temperature:.4f}")
 
                     # Update global best
@@ -88,8 +88,8 @@ class PolySubstitutionDecoder:
                         keys[i] = parent
                         min_text = plaintext
                         last_improvement = big_counter
-                        print(f"Iteration {big_counter}: {plaintext[:50]} ")
-                        print(f"Keys: {keys[i]}")
+                        #print(f"Iteration {big_counter}: {plaintext[:50]} ")
+                        #print(f"Keys: {keys[i]}")
                         big_counter = 0
                         temperature = initial_temperature  # reheat after a good improvement
 
@@ -100,7 +100,7 @@ class PolySubstitutionDecoder:
                     # Random restart if stuck
                     if big_counter - last_improvement > restart_interval:
                         keys[i] = KeyWithSwaps(n=26)  # re-randomize this alphabet
-                        print(f"Random restart triggered at {big_counter}")
+                        #print(f"Random restart triggered at {big_counter}")
                         big_counter = 0
                         temperature = initial_temperature
                         break  # break inner loop to restart fresh

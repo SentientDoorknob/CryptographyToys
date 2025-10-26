@@ -21,6 +21,9 @@ class AffineEncoder(CipherEncoder):
     def Encode(self, plaintext, key):
         output = ""
 
+        truncated_length = (len(plaintext) // 2) * 2
+        plaintext = plaintext[:truncated_length]
+
         m, c = int(key[0]), int(key[1])
 
         while math.gcd(m, 26) != 1:
@@ -31,4 +34,4 @@ class AffineEncoder(CipherEncoder):
             y = (m * x + c) % 26
             output += chr(y + 97)
 
-        return output, [m, c]
+        return plaintext, output, [m, c]

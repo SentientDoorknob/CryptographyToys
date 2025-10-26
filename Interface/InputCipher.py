@@ -7,7 +7,7 @@ def OpenInput(module, loop=None):
     if loop:
         loop.destroy()
 
-    print("Here")
+    #print("Here")
 
     info_color = "#d6d6d6"
 

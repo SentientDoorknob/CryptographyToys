@@ -20,4 +20,5 @@ def Analyse(text, no_bigrams):
     result.englishFitness = round(SubstitutionFitness(text), 4)
     result.commonMonograms = CommonMonograms(text, no_bigrams)
     result.periodLength = vignere_decoder.GetKeywordLength(text)
+    result.length = len(text)
     return result

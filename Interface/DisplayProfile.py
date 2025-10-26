@@ -84,6 +84,7 @@ def ShowResult(result, loop=None):
     stats_width, stats_partition = 2, 8
 
     display_stats = {
+        "Length": result.length,
         "Index OC": result.indexOC,
         "Chi Squared": result.chiSquared,
         "Friedman Test": result.friedmanTest,

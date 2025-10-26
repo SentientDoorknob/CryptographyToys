@@ -21,15 +21,15 @@ class HillDecoder:
 
     # Returns THHE. Assumes TH is the most common digraph, and HE the second.
     def GetThheMatrix(self, ciphertext):
-        digraphs = SplitDigraphs(ciphertext)
+        digraphs = SplitBigrams(ciphertext)
         digraph_freq = {}
 
         uniques = list(set(digraphs))
         for un in uniques: digraph_freq[un] = 0
-        print(digraph_freq)
+        #print(digraph_freq)
         for graph in digraphs:
             digraph_freq[graph] += 1
-        print(digraph_freq)
+        #print(digraph_freq)
 
         digraph_tuples = digraph_freq.items()
         digraph_tuples = sorted(digraph_tuples, key=lambda x: x[1], reverse=True)
@@ -51,7 +51,7 @@ class HillDecoder:
 
     # Returns PLAINTEXT. Multiplies digraphs by DCRM. See method.
     def DecryptWithKeyMatrix(self, ciphertext, key):
-        digraphs = SplitDigraphs(ciphertext)
+        digraphs = SplitBigrams(ciphertext)
         plaintext = ""
 
         for d in digraphs:
@@ -60,14 +60,23 @@ class HillDecoder:
             plaintext += chr(decrypted[1][0] + 97)
 
         return plaintext
-
-    def Decode(self, ciphertext):
-        ciphertext = StringFormat(ciphertext)
-        thhe = self.GetThheMatrix(ciphertext)
+    
+    
+    def DecodeWithTHHE(self, ciphertext, thhe):
         dcrm = self.GetDecryptionMatrix(thhe)
         plaintext = self.DecryptWithKeyMatrix(ciphertext, dcrm)
 
         return HillResult(dcrm, plaintext, ciphertext, thhe)
+
+    def Decode(self, ciphertext):
+        ciphertext = StringFormat(ciphertext)
+        thhe1 = self.GetThheMatrix(ciphertext)
+        #thhe2 = [[thhe1[1][0], thhe1[1][1]], [thhe1[0][0], thhe1[0][1]]]
+        thhe2 = [[thhe1[0][1], thhe1[0][0]], [thhe1[1][1], thhe1[1][0]]]
+        
+        result1, result2 = self.DecodeWithTHHE(ciphertext, thhe1), self.DecodeWithTHHE(ciphertext, thhe2)
+        
+        return result1 if EnglishFitness(result1.plaintext) < EnglishFitness(result2.plaintext) else result2
 
     def ReEvaluate(self, result, loop):
         result.keyword = self.GetDecryptionMatrix(result.thhe)

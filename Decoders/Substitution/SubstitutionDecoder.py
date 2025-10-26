@@ -10,16 +10,16 @@ class SubstitutionDecoder:
     
     def StochasticDecode(self, ciphertext, max_iterations, threshold):
         parent = KeyWithSwaps(ALPHABET, 0)
-        parent_text, _ = self.encoder.Encode(ciphertext, parent)
+        parent_text, _, _ = self.encoder.Encode(ciphertext, parent)
         parent_fitness = SubstitutionFitness(parent_text)
 
         iterations = 0
         for k in range(max_iterations):
             iterations += 1
             child = KeyWithSwaps(parent, random.randint(1, 2))
-            text, _ = self.encoder.Encode(ciphertext, child)
+            text, _, _ = self.encoder.Encode(ciphertext, child)
             child_fitness = SubstitutionFitness(text)
-            print(f"Iteration: {iterations}, Fitness: {parent_fitness}, Plain: {parent_text[:20]}")
+            #print(f"Iteration: {iterations}, Fitness: {parent_fitness}, Plain: {parent_text[:20]}")
 
             if child_fitness < parent_fitness:
                 parent = child
@@ -41,11 +41,11 @@ class SubstitutionDecoder:
             return None
         encoding = InvertKey(key)
         result = SubstitutionResult(key, plaintext, ciphertext, iterations, encoding)
-        print(result.plaintext)
+        #print(result.plaintext)
         return result
     
     def ReEvaluate(self, result, loop):
-        result.plaintext = self.encoder.Encode(StringFormat(result.ciphertext), result.keyword)
+        result.plaintext, _ = self.encoder.Encode(StringFormat(result.ciphertext), result.keyword)
         result.encryption = InvertKey(result.keyword)
         result.Display(loop)
         

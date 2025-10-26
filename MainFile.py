@@ -15,7 +15,7 @@ def OpenInput(loop=None):
     Interface.SelectTool.OpenInput(loop)
     
 def ClearGlobals():
-    print("Clearing globals")
+    #print("Clearing globals")
     Encoder.global_result = None
     Decoder.global_result = None
     Generator.global_result = None

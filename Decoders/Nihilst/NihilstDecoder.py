@@ -71,22 +71,22 @@ class UnitTable:
 
     def Display(self):
         for item in self.table:
-            print(f"Keyword Length {item[0]}: ")
+            #print(f"Keyword Length {item[0]}: ")
             for line in item[1]:
                 output = ""
                 for b in line:
                     output += "X " if b else "- "
-                print(output)
-            print("\n")
+                #print(output)
+            #print("\n")
 
 """
     def DisplayComponent(self, component):
-        print(f"Keyword Length {len(component)}: ")
+        #print(f"Keyword Length {len(component)}: ")
         for line in component:
             output = ""
             for b in line:
                 output += "X " if b else "- "
-            print(output)
+            #print(output)
 
     # Returns TRY_UT, null. Null if table is invalid (see Method Source).
     def TryKeywordLength(self, ciphertext, length):
@@ -153,7 +153,7 @@ class UnitTable:
     # Returns KEYS
     def GetPossibleKeys(self, units, tens):
         length = len(units)
-        print(length)
+        #print(length)
         possibilities = [[] for _ in range(length)]
 
         for i in range(length):
@@ -175,7 +175,7 @@ class UnitTable:
                 cosets[i][j] -= key[i]
 
         plaintext = InterleaveList(cosets)
-        print(plaintext)
+        #print(plaintext)
         output = ""
 
         for char in plaintext:
@@ -231,9 +231,9 @@ class UnitTable:
 
         keys = self.GetPossibleKeys(units_possibilities, tens_possibilities)
 
-        print(units_possibilities)
-        print(tens_possibilities)
-        print(keys)
+        #print(units_possibilities)
+        #print(tens_possibilities)
+        #print(keys)
 
         results = self.GetPossibleResults(ciphertext, keys)
         result = self.GetBestResult(results)
@@ -247,15 +247,15 @@ class NihilistDecoder:
     #                                -> UN_COMP ->      UNITS      ->
 
     MAX_KEYWORD_LENGTH = 21
-    THRESHOLD = 0.003
+    THRESHOLD = 0.005
 
     def DisplayComponent(self, component):
-        print(f"Keyword Length {len(component)}: ")
+        #print(f"Keyword Length {len(component)}: ")
         for line in component:
             output = ""
             for b in line:
                 output += "X " if b else "- "
-            print(output)
+            #print(output)
 
     def CountUnits(self, coset):
         output = [0 for i in range(10)]
@@ -382,9 +382,13 @@ class NihilistDecoder:
     def Decode(self, ciphertext):
         ciphertext = NumberFormat(ciphertext)
         ciphertext = [int(x) for x in ciphertext.split()]
+        
+        print(ciphertext)
 
         self.MAX_KEYWORD_LENGTH = 21
         self.MAX_KEYWORD_LENGTH = min(math.floor(len(ciphertext) / 5), self.MAX_KEYWORD_LENGTH)
+        
+        print(self.MAX_KEYWORD_LENGTH)
 
         table = self.MakeUnitTable(ciphertext)
 
@@ -412,6 +416,8 @@ class NihilistDecoder:
 
             length_results = self.GetPossibleResults(ciphertext, keys)
             results += length_results
+        
+        print(results)
 
         return self.GetBestResult(results)
 

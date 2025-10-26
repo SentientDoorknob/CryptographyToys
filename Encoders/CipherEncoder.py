@@ -20,7 +20,7 @@ class CipherEncoder:
         else:
             keyword = self.ParseKey(keyword.lower())
 
-        ciphertext, keyword = self.Encode(formatted, keyword)
+        plaintext, ciphertext, keyword = self.Encode(formatted, keyword)
         if ciphertext == "":
             ciphertext = "welp someone messed up"
 

@@ -14,6 +14,7 @@ Entropy
 
 class TextAnalysisResult:
     text = ""
+    length = 0
     indexOC = 0
     friedmanTest = 0
     chiSquared = 0

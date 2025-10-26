@@ -56,8 +56,8 @@ class PermutationDecoder:
                 if score > 0:
                     num_positives += 1
         
-        print(f"Keyword Length: {length}, Positives: {num_positives}")
-        if num_positives >= (length - 2):
+        #print(f"Keyword Length: {length}, Positives: {num_positives}")
+        if num_positives >= (length - 1):
             return results
 
         return self.EvaluateCiphertext(ciphertext, length + 1)
@@ -95,19 +95,19 @@ class PermutationDecoder:
         return Interleave(permuted_cosets)
 
     def Decode(self, ciphertext):
-        print("DECODING")
+        #print("DECODING")
         text = StringFormat(ciphertext)
-        print(text)
+        #print(text)
         pairs = self.EvaluateCiphertext(text, 3)
-        print(pairs)
+        #print(pairs)
         
         if pairs is None:
             return PermutationResult([1, 2, 3, 4], f"nosolutionfoundifidontputthisinitcrashessoherewearehowisyourdaygoing", ciphertext)
         
         keyword = self.GetKeyword(pairs)
-        print(keyword)
+        #print(keyword)
         plaintext = self.DecryptWithKeyword(text, keyword)
-        print(plaintext)
+        #print(plaintext)
 
         return PermutationResult(keyword, plaintext, text)
 
