@@ -1,17 +1,12 @@
 import random
 
-from Encoders.Ciphers.AffineEncoder import AffineEncoder
-from Encoders.Ciphers.CaesarEncoder import CaesarEncoder
-from Encoders.Ciphers.HillEncoder import HillEncoder
-from Encoders.Ciphers.NihilistEncoder import NihilistEncoder
-from Encoders.Ciphers.PermutationEncoder import PermutationEncoder
-from Encoders.Ciphers.SubstitutionEncoder import SubstitutionEncoder
-from Encoders.Ciphers.VignereEncoder import VignereEncoder
-from Encoders.Ciphers.ColumnarEncoder import ColumnarEncoder
+from Imports.CipherEncoders import *
 
 LEN = 250
 
-encoders = [CaesarEncoder(LEN), VignereEncoder(LEN), SubstitutionEncoder(LEN//2), AffineEncoder(LEN), PermutationEncoder(LEN), NihilistEncoder(LEN), HillEncoder(LEN), ColumnarEncoder(LEN)]
+encoders = [CaesarEncoder(LEN), VignereEncoder(LEN), SubstitutionEncoder(LEN//2), AffineEncoder(LEN), 
+            PermutationEncoder(LEN), NihilistEncoder(LEN), HillEncoder(LEN), ColumnarEncoder(LEN),
+            CadenusEncoder(LEN)]
 encoder_includes = [True for i in range(len(encoders))]
 
 

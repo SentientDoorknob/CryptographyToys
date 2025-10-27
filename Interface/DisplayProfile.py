@@ -86,6 +86,7 @@ def ShowResult(result, loop=None):
     display_stats = {
         "Length": result.length,
         "Index OC": result.indexOC,
+        "Digraphic IOC": result.digraphicIndexOC,
         "Chi Squared": result.chiSquared,
         "Friedman Test": result.friedmanTest,
         "Mono Entropy": result.entropy,

@@ -42,3 +42,12 @@ def GetRandomParagraph(char_count):
         x = random.randint(97, 122)
         output += chr(x)
     return output
+
+
+def GetEnglishCorpus():
+    output = ""
+    for path in text_paths:
+        with open(f"Text/{path}", "r", encoding="utf8") as file:
+            output += file.read()
+    return output
+        

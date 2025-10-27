@@ -21,3 +21,6 @@ class ColumnarResult:
         self.ciphertext = ciphertext
         self.plaintext = plaintext
         self.keyword_len = len(keyword)
+        
+    def Display(self, loop):
+        print(self.keyword, "\n", self.plaintext)

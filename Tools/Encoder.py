@@ -1,13 +1,6 @@
 import Interface.DisplayEncoding
 import Interface.InputCipher
-from Encoders.Ciphers.AffineEncoder import *
-from Encoders.Ciphers.CaesarEncoder import *
-from Encoders.Ciphers.HillEncoder import *
-from Encoders.Ciphers.NihilistEncoder import *
-from Encoders.Ciphers.PermutationEncoder import *
-from Encoders.Ciphers.SubstitutionEncoder import *
-from Encoders.Ciphers.VignereEncoder import *
-from Encoders.Ciphers.ColumnarEncoder import *
+from Imports.CipherEncoders import *
 
 length = 0
 
@@ -18,7 +11,8 @@ ciphers = {"Caesar Cipher": CaesarEncoder(length),
            "Permutation Cipher": PermutationEncoder(length),
            "Hill Cipher": HillEncoder(length),
            "Nihilist Cipher": NihilistEncoder(length),
-           "Columnar Cipher": ColumnarEncoder(length)}
+           "Columnar Cipher": ColumnarEncoder(length),
+           "Cadenus Cipher": CadenusEncoder(length)}
 
 
 global_result = None

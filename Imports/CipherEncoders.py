@@ -6,3 +6,4 @@ from Encoders.Ciphers.NihilistEncoder import NihilistEncoder
 from Encoders.Ciphers.PermutationEncoder import PermutationEncoder
 from Encoders.Ciphers.SubstitutionEncoder import SubstitutionEncoder
 from Encoders.Ciphers.VignereEncoder import VignereEncoder
+from Encoders.Ciphers.CadenusEncoder import CadenusEncoder

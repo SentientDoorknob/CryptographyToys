@@ -21,4 +21,5 @@ def Analyse(text, no_bigrams):
     result.commonMonograms = CommonMonograms(text, no_bigrams)
     result.periodLength = vignere_decoder.GetKeywordLength(text)
     result.length = len(text)
+    result.digraphicIndexOC = round(BigraphicIndexOfCoincidence(text), 4)
     return result

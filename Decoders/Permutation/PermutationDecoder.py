@@ -98,12 +98,14 @@ class PermutationDecoder:
         #print("DECODING")
         text = StringFormat(ciphertext)
         #print(text)
-        pairs = self.EvaluateCiphertext(text, 3)
+        pairs = self.EvaluateCiphertext(text, 4)
         #print(pairs)
         
         if pairs is None:
+            pairs = self.EvaluateCiphertext(text, 3)
+        if pairs is None:
             return PermutationResult([1, 2, 3, 4], f"nosolutionfoundifidontputthisinitcrashessoherewearehowisyourdaygoing", ciphertext)
-        
+    
         keyword = self.GetKeyword(pairs)
         #print(keyword)
         plaintext = self.DecryptWithKeyword(text, keyword)

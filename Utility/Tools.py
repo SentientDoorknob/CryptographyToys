@@ -2,6 +2,7 @@ import random
 import re
 import math
 from Utility.TrigramFrequencies import *
+from Utility.Digram import digram_frequencies, DigramScores
 
 ENGLISH_IOC = 0.0667
 ENGLISH_LETTER_FREQ = [0.0817, 0.0150, 0.0278, 0.0425, 0.1272, 0.0223, 0.0202, 0.0609, 0.0697, 0.0015, 0.0077, 0.0403, 0.0241, 0.0675, 0.0751, 0.0193, 0.0010, 0.0599, 0.0633, 0.0906, 0.0276, 0.0098, 0.0236, 0.0015, 0.0197, 0.0007]
@@ -20,6 +21,7 @@ BIGRAPHIC_EINHEIT = ['aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'ai', 'aj',
 
 def ApplyToLetters(text, func):
     return "".join([func(letter) for letter in text])
+
 
 
 def StringFormat(x):
@@ -79,6 +81,19 @@ def IndexOfCoincidence(text):
 
     total = sum([f * (f-1) for f in absolutes])
 
+    return total / length_mult
+
+
+def BigraphicIndexOfCoincidence(text):
+    length = len(text) // 2
+
+    if length < 2: length = 2
+
+    length_mult = length * (length - 1)
+    absolutes = AbsoluteBigramFrequency(text, False).values()
+
+    total = sum([f * (f - 1) for f in absolutes])
+    
     return total / length_mult
 
 
@@ -225,8 +240,9 @@ def RemoveMultiples(nums):
     return result
 
 
-def AbsoluteBigramFrequency(text):
+def AbsoluteBigramFrequency(text, overlap=True):
     frequencies = {}
+    skip = 1 if overlap else 2
     
     for i in range(26):
         for j in range(26):
@@ -234,8 +250,10 @@ def AbsoluteBigramFrequency(text):
             
     #print(frequencies)
     
-    for i in range(len(text) - 1):
-        frequencies[text[i] + text[i + 1]] += 1
+    for i in range(len(text) - 1)[::skip]:
+        char = text[i] + text[i + 1]
+        if not char in frequencies.keys(): frequencies[char] = 0
+        frequencies[char] += 1
     
     return frequencies
 
@@ -360,14 +378,14 @@ def SubstitutionFitness(text):
     return score
 
 
-def KeyWithSwaps(key="abcdefghijklmnopqrstuvwxyz", n=0):
+def KeyWithSwaps(key="abcdefghijklmnopqrstuvwxyz", n=0, s=True):
     key = list(key)
     for i in range(n):
-        a, b = random.randint(0, 25), random.randint(0, 25)
+        a, b = random.randint(0, len(key) - 1), random.randint(0, len(key) - 1)
         temp = key[a]
         key[a] = key[b]
         key[b] = temp
-    return "".join(key)
+    return "".join(key) if s else key
     
 
 def IsValidKey(key):
@@ -438,6 +456,33 @@ def Transpose(text, n):
 
 def RotateList(l, n):   
     return l[n:] + l[:n]
+
+
+def MakeBlocks(l, n):
+    num_blocks = (len(l) // n) + 1
+    blocks = [""] * num_blocks
     
+    for i, element in enumerate(l):
+        blocks[i // n] += element
+    return blocks[:-1]
+
+
+def RemoveDuplicates(l):
+    for item in list(l):
+        while l.count(item) > 1:
+            l.reverse()
+            l.remove(item)
+            l.reverse()
+    return l
+
+
+def CountSymbols(s):
+    frequencies = {}
+    for char in s:
+        if char in frequencies.keys():
+            frequencies[char] += 1
+        else:
+            frequencies[char] = 1
+    return frequencies
     
     
