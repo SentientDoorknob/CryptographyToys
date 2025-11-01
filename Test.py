@@ -3,13 +3,16 @@ import random
 import Text.TextGrabber
 from Utility.Tools import *
 from Imports.Ciphers import *
+from Profiler.Analyser import Analyse
+from Utility.LinearAlgebra import LinearAlgebra
+import statistics
 
 length = 500
 ciphers = [(PermutationEncoder(length), PermutationDecoder()), (VignereEncoder(length), VignereDecoder()), (AffineEncoder(length), AffineDecoder()), 
            (CaesarEncoder(length), VignereDecoder()), (HillEncoder(length), HillDecoder()), 
            (ColumnarEncoder(length), ColumnarDecoder()),]
 
-if __name__ == "__main__":
+if __name__ == " __main__":
     tests = 500
     length = 500
     
@@ -18,6 +21,7 @@ if __name__ == "__main__":
         
         successes = 0
         for _ in range(tests):
+            print(_)
             
             problem = encoder.GetPracticeProblem()
             original_plaintext = problem.plaintext
@@ -82,7 +86,164 @@ if __name__ == " __main__":
     print("".join(replaced_pairs))
     
 if __name__ == " __main__":
+    tests = 500
+    results = []
+    encoder = HillEncoder(100)
+    for i in range(tests):
+        print(i)
+        text = encoder.GetPracticeProblem().ciphertext
+        analysis = Analyse(StringFormat(text), 10)
+        results.append(list(analysis)[0])
+        
+    stats = ["IOC", "DIOC", "FMT", "X2", "E", "3E", "F", "SF"]
+    for i in range(len(results[0])):
+        stat = LinearAlgebra.GetColumn(results, i)
+        mean = round(Mean(stat), 5); std = round(statistics.stdev(stat), 5); SE = round(std * 1.96, 5)
+        print(f"Mean: {mean}")
+        print(f"Std: {std}")
+        print(f"{stats[i]}: {mean} +- {SE} (95% Cl) ({round(SE/mean * 100, 2)}%)\n")
+        
+        
+def GetMissingPairs(cipher):
+    cipher = WhitespaceFormat(cipher)
+    digrams = SplitBigrams(cipher, overlap=True)
+    digram_list = RemoveDuplicates(digrams)
+    digram_list.sort()
     
-    text = PermutationEncoder(100).GetPracticeProblem(keyword = "xy").ciphertext
-    #text = Text.TextGrabber.GetEnglishCorpus()
-    print(BigraphicIndexOfCoincidence(StringFormat(text)))
+    monogram_list = RemoveDuplicates(list(cipher))
+    possible_digrams = PossibleDigrams(monogram_list)
+    possible_digrams.sort()
+    
+    difference = set(possible_digrams) - set(digram_list)
+    return list(difference)
+
+
+def GetRowsColumns(digrams, monograms):
+    rows = [[] for _ in monograms]
+    cols = [[] for _ in monograms]
+    indices = GetMonogramsDictionary(monograms)
+    
+    for missing in digrams:
+        first = indices[missing[0]]
+        last = indices[missing[1]]
+        
+        rows[first].append(missing)
+        cols[last].append(missing)
+    
+    return rows, cols
+        
+    
+    
+def GetMonogramsDictionary(monograms):
+    dictionary = {}
+    for i, mono in enumerate(monograms):
+        dictionary[mono] = i
+    return dictionary
+    
+    
+def GetKeywordDigrams(rows, cols):
+    keyword_digrams = []
+    
+    for row in rows:
+        if len(row) == 1:
+            keyword_digrams += row
+    
+    for col in cols:
+        if len(col) == 1:
+            keyword_digrams += col
+    
+    return keyword_digrams
+
+
+def GetBannedLetters(iteration_digrams):
+    firsts = []
+    lasts = []
+    
+    for digram in iteration_digrams:
+        firsts.append(digram[0])
+        lasts.append(digram[1])
+        
+    return firsts, lasts
+
+
+def DecryptWithKeyword(ciphertext, keyword):
+    alphabet_pointer = 0
+    keyword_pointer = 0
+    
+    keyword_len = len(keyword)
+    indices = GetMonogramsDictionary(keyword)
+    output = ""
+    
+    for char in ciphertext:
+        index = indices[char]
+        difference = (index - keyword_pointer) % keyword_len
+        keyword_pointer = index
+        alphabet_pointer = (alphabet_pointer + difference) % 26
+        output += chr(alphabet_pointer + ord("a"))
+    
+    return output
+        
+        
+    
+
+if __name__ == "__main__":
+    ciphertext = WhitespaceFormat(input("Enter Ciphertext: ").lower())
+    #ciphertext = WhitespaceFormat("XAYIHVBS#URMXE@#WBQPSTGXECXCXPA@OCATLXVBEQSZYB@DTAJSNEKGJDVWEAXA@GBNGQWJQXOJEGPXJLFXFESFMWDOWEKEJFPWE@CABSYUWSKOLZDMH#BIBYTJQYUECVAUEOCSPKWLGM@HIEWNEJKCUBSXMSEQVALMNTUBSNBMD#OJEQGADBPGYPHYQJVHBHIBTDKTAPCEUMI#WEHNGZIDVQXZENWAQBPFHJKMSYOBUORLGNBLZ@#QAWPRIEOVY#@RVYUFCHO@UZJ#DVUNAT#NF@UPXKOPYRSZ@STJHKNSMPRDVXTGEKITAPLUEJ#OVR#SUPJPZKGNGDWCXIPJDIXCPBYOQMSLZUJVNXED#QG#WENUGCN@OFEPATLMPDWLCDEOATAP@D#Z#CFORQLUZPXQ#ZGOKTA@NKMPG#MQLZUJVNB@ADBNALQ@E@KLND#XUF@BL#E@GOBHDA@DTAGXPXIYUVBCYOJ@TQD#WDLIO#NJKB#TDRUZRNG@H#JW#PSE@NRD#XUSLHZSRNXSDXZGKIJEUYXCPVOMHGHSLNULRZPU#UNO@EGEAPEXUFWEACWJYIEMLHJXNOWLIQYXKVXV#GRCMPYKOJDP@DJZGVPOVUBIQGAZIHUYX@RLWBSL@DSGTBEV#PSKEDLGRLORQYVJQWBGBZMDAWCUQ#IKET@PISD@QPVSZGTLTDZODTUO#MEKO@FXOMXCOGZIDVUNAXKRENOQ@FHVAW@UIVPSKGJVRNGQVMDJYBPQBQ@FHOMSFECWORYQSZLMK#ZFPSIJQCEHXSEDHNJQJGZOBPSBQMGUJOMSFECWORYQSZLMK#ZFPSIJQCEHXUJ@MHMPAEGBNXEIDUWCDK#OQYXKMSIVOPBZKQDRGWZSHBYTAPLXB@CSF@SMAYMEJPTHJWGNBYN#UCZMBL#WCSMTGYJOUBHJQZF#ILIESECK@FXIVRXMSENJGQJQDVXECSJU#UKSPAUFBOYVJVJMRVJ#BWCUQKXEJPA@ELVJS#QR@VSEASOGUIMCGDEUYXVYJYLNETQEZO@PQRO#NKMXZOSVASNKLZJFAPWCE#FJVGMKMXDZ@RXMSNSMJNB@XB#JEMNDI@YSKWAP@SRU@H#JABHNQEOLEDASYTCPYOSGMIVGOJQAKUCLXJRNUCPAIHVBDU@LMR#OTLGIZUF#KGXNRDLUMIDZLCOBGZIJHGCYPEGTJ@DUAVAVH#MJRJEYQDRGLHXT#BVF@KSREJCXC@RV#RLGBQNBYTAPDNDKMXSLHUJHKHJBDGIUNTWBV#KTAJVGMK@AUYFZSNOGKRHBTXUJNKDT@JRFEUMIHOBXAEILWTCZSJ#KTAPGIFI@GD@FS#VZLZGJBTCXB#JEMNDUPKXEVL#E#MDWDGHIEWTAPGAZVR#SUGL#EYSWTBI#JZFAVFV@N@R@FSFPJOWJ@ILMIXVZOPBPS@PA@#KBSZ@GPELOROXOHYNEHTJZ@T#J@TPKVZDBPD@OJHEJDHDGQEAWGNBJ@OPCMKBR#IVSCOHYQJUGQ#XZKDGEGXGAZVR#SUXAEYGZIULT#XNXBPJNFUI#UTGLGKOYBLJWMKDFJWBVDRE@FHVYBLSCSZSNK@XHQDEAGNBTJDVZUZF#EUVYPKBSDJXAGAYSLUZG#VIAOHESYJT#HIWOXBCLVQNR@AXUXZNPBRQ@XFHIEWDA@QUDHIXYFZS#JYSPKBDHJSNOACE@KECUIHVYDNHVJDWXHMKDYPGEN@FHJBEVCXUOELYJWMKDTETDSAUCUIECXF@CXPHSZLV#KVUXBJ#EKPKDHLH#PX#TGWTK#HBLXECTJO@VZSVAWQJAUSZKXHSIJOZF#EW@UNKP#XQJUJEYLMNPSWIWBUSPFJUBDVZVFTXCFEGWP@SNBMDWBC#QNPHOBJRTBPUZJHCGQJBZ#DTQYXCKMXDGRMPYJRLRNG@DJZVLICVHEJKPAVF@EM#VYQDUBDXUJWBYDUGYXFCOFEBLGJHUYQJHLT@DTETPRI@PJFC@VF@RVXAHUY@WQEUGWCJ@EIAGVB@AIDORQYOQZLGMLVQXYXTXBQYNRDJ@BZ#FZSY@LZOTLMDAPILIPYUI@HBFSR#RVAV@L#OMKVUZENUAQBPFHDIVXDJSUYFOROSXMATLGXPZ@DSCLUXUIMPKECUGTLRXSTYGZIF#PEWPIFYGOIJVAWDVL#UZPOWDLHEXZT#EQLXCZDJUVCOPBHYMBZBZHXGEUGPNDW@HSE@MXJRBSRNDGZH#JQCPE#SUIMNDKVEXUFCPTLDHMB@V@GW#UAPXNSZPGSAYPVHYXJWMLFZF#@Y@#CUZI#ACVBSMAYQJVUGQMDXBPECUQ#NJVXVGBCP@LIUWSZYXTQYUJ@LXCVCWOUZT#IZJBNYSBDIPSXCZTXLEMNYQJVLIEANOKEBQYXFCXYVQWPDOALM#NGTJFPYBLIPGCKMJDWEALHPHOROVGHIEWDYJNDUZSYOS#DLXMAJHJL#OMK#CDECD#KTFPDXCOMPVHC@YSMOKSZRXLTHJOE#UPKRUCGLUXBEAORXPHEQSHRXMKL@IS@TDUG#PCDIVAI#WZ@BMJ@LSROUKL@I@LOXQTJUGCX@SR@CPYTLQDUBZDEVLI@FHFLFAEBSTPY#UK@OWJLTDJZF#QP@LUEHXVMCWJYQJNB@#WGBCTQGKUGLPFXOASABRZ@KMKDZTXSTAPYXJFXAEBSNGZIB@IBFPSIPQUIJBJ@HFCPNVEJ@YJHSEXBEQEQ#RVKXYVFSY#U#OQRMVWDQBWQUQPY#LNR@FXEOJWJALFJGT@SL#TABIE#FNREJKVXPIV#RTXNOHJLSZJBDKVHIBTAIUQNUIPA@ORQRZLDUBTHZOXSMJQYXCZPIEOJWJALSXHDHMGCJQZF#ME#BIFECUSYOTQXAVUZDTAG@HTBTCUKOQGDLFZC@SMNEQSHFJMKL@#XGWJUXSURVKX@CEGMAUILWOSGAWOWCENO@FHJKPYR@EMZDVZ@#NOVB@HIBY#UY#PFNA@#SY")
+    missing_digrams = GetMissingPairs(ciphertext)
+    monogram_list = RemoveDuplicates(list(ciphertext))
+    
+    missing_no_doubles = list(filter(lambda x: x[0] != x[1], missing_digrams))
+    missing_swapped = ["" + x[1] + x[0] for x in missing_no_doubles]
+    missing_swapped.sort()
+    
+    keyword_digrams = []
+    
+    for i in range(10):
+        rows, cols = GetRowsColumns(missing_swapped, monogram_list)
+        iteration_keyword_digrams = GetKeywordDigrams(rows, cols)
+        keyword_digrams += iteration_keyword_digrams
+        firsts_banned, lasts_banned = GetBannedLetters(iteration_keyword_digrams)
+        def IsValid(digram):
+            return not ((digram[0] in firsts_banned) or (digram[1] in lasts_banned))
+        
+        missing_swapped = list(filter(IsValid, missing_swapped))
+        
+        if not iteration_keyword_digrams:
+            print("No new info.. breaking")
+            break
+        
+        print("\n\n")
+        print(f"Keyword Digrams: {iteration_keyword_digrams}")
+        print(f"Total Keyword: {keyword_digrams}")
+        print(f"New Missing Digrams: {missing_swapped}")
+        input("Next Interation...")
+        
+    keyword_digrams = list(set(keyword_digrams))
+    
+    print("\n\n")
+    keyword_digrams.sort()
+    print(", ".join(keyword_digrams))
+    
+    keyword = WhitespaceFormat(input("\n\nKeyword: "))
+    
+    best_fitness = 10
+    best_plaintext = ""
+    
+    for i in range(len(keyword)):
+        rotated = RotateList(keyword, i)
+        plaintext = DecryptWithKeyword(ciphertext, rotated)
+        fitness = EnglishFitness(plaintext)
+        print(f"{i} | Plaintext: {plaintext[:20]} | Keyword: {rotated} | Fitness: {fitness}")
+        
+        if fitness < best_fitness:
+            best_fitness = fitness
+            best_plaintext = plaintext
+    
+    print("\n\n\n")
+    print(best_plaintext)
+    
+        
+        
+        
+        
+        

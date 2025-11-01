@@ -14,7 +14,7 @@ class PermutationDecoder:
 
     """
 
-    MAX_KEYWORD_LENGTH = 30
+    MAX_KEYWORD_LENGTH = 20
 
     # CIPHERTEXT -> PAIRS -> KEY -> PLAINTEXT
 
@@ -33,34 +33,37 @@ class PermutationDecoder:
         return total / column_size
 
     # Returns PAIRS. Recursively follows method with incrementing keyword lengths.
-    def EvaluateCiphertext(self, ciphertext, length):
-        if length >= self.MAX_KEYWORD_LENGTH:
-            return None
-
-        cosets = MakeCosets(ciphertext, length)
-        results = []
-
-        for _ in range(length):
-            results.append([0 for i in range(length)])
-
-        num_positives = 0
-
-        for i in range(length):
-            c1 = cosets[i]
-            for j in range(length):
-                c2 = cosets[j]
-
-                score = self.EvaluateColumnPair(c1, c2)
-                results[i][j] = score
-
-                if score > 0:
-                    num_positives += 1
+    def EvaluateCiphertext(self, ciphertext):
+        pairs = []
         
-        #print(f"Keyword Length: {length}, Positives: {num_positives}")
-        if num_positives >= (length - 1):
-            return results
+        for length in range(3, self.MAX_KEYWORD_LENGTH + 1):
+            
+            if any([length % len(pair_grid) == 0 for pair_grid in pairs]): continue;
+            
+            cosets = MakeCosets(ciphertext, length)
+            results = []
+    
+            for _ in range(length):
+                results.append([0 for i in range(length)])
+    
+            num_positives = 0
+    
+            for i in range(length):
+                c1 = cosets[i]
+                for j in range(length):
+                    c2 = cosets[j]
+    
+                    score = self.EvaluateColumnPair(c1, c2)
+                    results[i][j] = score
+    
+                    if score > 0:
+                        num_positives += 1
+            
+            #print(f"Keyword Length: {length}, Positives: {num_positives}")
+            if num_positives >= (length - 1):
+                pairs.append(results)
 
-        return self.EvaluateCiphertext(ciphertext, length + 1)
+        return pairs
 
     # Returns KEY. See method - follows path of adjacent columns.
     def GetKeyword(self, pairs):
@@ -93,25 +96,36 @@ class PermutationDecoder:
             permuted_cosets[i] = cosets[keyword[i]]
 
         return Interleave(permuted_cosets)
+    
+    
+    def GetBestResult(self, results, ciphertext):
+        best_fitness = 10
+        best_result = PermutationResult([1, 2, 3, 4], f"nosolutionfoundifidontputthisinitcrashessoherewearehowisyourdaygoing", ciphertext)
+        
+        for result in results:
+            fitness = SubstitutionFitness(result.plaintext)
+            if fitness < best_fitness:
+                best_fitness = fitness
+                best_result = result
+        return best_result
+        
 
     def Decode(self, ciphertext):
         #print("DECODING")
         text = StringFormat(ciphertext)
         #print(text)
-        pairs = self.EvaluateCiphertext(text, 4)
+        pairs = self.EvaluateCiphertext(text)
         #print(pairs)
         
-        if pairs is None:
-            pairs = self.EvaluateCiphertext(text, 3)
-        if pairs is None:
-            return PermutationResult([1, 2, 3, 4], f"nosolutionfoundifidontputthisinitcrashessoherewearehowisyourdaygoing", ciphertext)
-    
-        keyword = self.GetKeyword(pairs)
-        #print(keyword)
-        plaintext = self.DecryptWithKeyword(text, keyword)
-        #print(plaintext)
+        results = []
+        for pair_grid in pairs:
+            keyword = self.GetKeyword(pair_grid)
+            #print(keyword)
+            plaintext = self.DecryptWithKeyword(text, keyword)
+            #print(plaintext)
+            results.append(PermutationResult(keyword, plaintext, text))
 
-        return PermutationResult(keyword, plaintext, text)
+        return self.GetBestResult(results, ciphertext)
 
     def ReEvaluate(self, result, loop):
         result.keyword_len = len(result.keyword)

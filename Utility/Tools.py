@@ -23,9 +23,12 @@ def ApplyToLetters(text, func):
     return "".join([func(letter) for letter in text])
 
 
-
 def StringFormat(x):
     return re.sub("[^a-zA-Z]", "", x).lower()
+
+
+def WhitespaceFormat(x):
+    return "".join(x.lower().split())
 
 
 def DigitFormat(x):
@@ -157,13 +160,12 @@ def ReducePermutationKeyword(keyword):
     return keyword
 
 
-def SplitBigrams(text):
-    num_digraphs = len(text) // 2
-    digraphs = ["" for _ in range(num_digraphs)]
+def SplitBigrams(text, overlap=False):
+    digraphs = []
 
-    indices = list(range(len(text)))[::2]
+    indices = list(range(len(text)))[:-1:1 if overlap else 2]
     for i in indices:
-        digraphs[i // 2] = "" + text[i] + text[i + 1]
+        digraphs.append("" + text[i] + text[i + 1])
 
     return digraphs
 
@@ -484,5 +486,22 @@ def CountSymbols(s):
         else:
             frequencies[char] = 1
     return frequencies
+
+
+def GetSymbolCount(s):
+    return len(CountSymbols(s).keys())
+
+
+def Mean(ints):
+    return sum(ints) / len(ints)
+
+
+def PossibleDigrams(monograms):
+    digrams = []
+    for a in monograms:
+        for b in monograms:
+            digrams.append(f"{a}{b}")
+            
+    return digrams
     
     

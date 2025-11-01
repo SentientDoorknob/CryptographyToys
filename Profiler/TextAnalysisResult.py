@@ -28,5 +28,20 @@ class TextAnalysisResult:
     digraphicIndexOC = 0
     commonBigrams = []
     commonMonograms = []
+    
+    def __str__(self):
+        return (f"""
+IOC:  {self.indexOC}
+DIOC: {self.digraphicIndexOC}
+FMT:  {self.friedmanTest}
+X2:   {self.chiSquared}
+E:    {self.entropy}
+3E:   {self.triEntropy}
+F:    {self.englishFitness}
+SF:   {self.substitutionFitness}
+        """)
+    
+    def __iter__(self):
+        yield [self.indexOC, self.digraphicIndexOC, self.friedmanTest, self.chiSquared, self.entropy, self.triEntropy, self.englishFitness, self.substitutionFitness]
 
     
