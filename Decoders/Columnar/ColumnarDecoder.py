@@ -72,3 +72,13 @@ class ColumnarDecoder:
         plaintext = self.permutationDecoder.DecryptWithKeyword(t_text, keyword)
         
         return ColumnarResult(keyword, plaintext, ciphertext)
+    
+    def ReEvaluate(self, result, loop):
+        print(result.keyword)
+        keyword_length = len(result.keyword)
+        length = len(result.plaintext)
+        transpose_length = length // keyword_length
+        t_text = Transpose(result.ciphertext, transpose_length)
+        result.plaintext = self.permutationDecoder.DecryptWithKeyword(t_text, result.keyword)
+        result.Display(loop)
+    
