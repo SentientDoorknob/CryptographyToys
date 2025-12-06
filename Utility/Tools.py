@@ -190,12 +190,49 @@ def XSquared(text):
     return total
 
 
-def GetPolybiusCoordinates(char):
+def GetPolybiusCoordinates(char, grid=None):
     if char == "z": return 55
     x = (ord(char) - 97) % 5 + 1
     y = (ord(char) - 97) // 5 + 1
 
     return 10 * y + x
+
+
+def TextToPolybiusCoordinates(text, grid=None):
+    if not grid:
+        grid = PolybiusDefault
+
+    coordinate_lookup = {}
+
+    for i in range(5):
+        for j in range(5):
+            coordinate_lookup[grid[i][j].lower()] = (i, j)
+
+    coordinates = []
+    
+    for char in StringFormat(text):
+        coordinates.append(coordinate_lookup[char])
+    
+    return coordinates
+
+
+def CoordinatesToText(pairs, grid=None):
+    if not grid:
+        grid = PolybiusDefault
+
+    coordinate_lookup = {}
+
+    for i in range(5):
+        for j in range(5):
+            coordinate_lookup[(i, j)] = grid[i][j].lower()
+    
+    text = ""
+    
+    for pair in pairs:
+        text += coordinate_lookup[pair]
+    
+    return text
+        
 
 
 def GetColumn(array, column):
@@ -398,12 +435,12 @@ def KeyWithSwaps(key="abcdefghijklmnopqrstuvwxyz", n=0, s=True):
     return "".join(key) if s else key
     
 
-def IsValidKey(key):
-    if len(key) != 26:
+def IsValidKey(key, length = 26):
+    if len(key) != length:
         #print(f"Invalid Key Length: {len(key)}")
         return False
     
-    if len(set(key)) != 26:
+    if len(set(key)) != length:
         #print(f"Duplicate Characters in Key: {key}")
         return False
     
@@ -511,5 +548,24 @@ def PossibleDigrams(monograms):
             digrams.append(f"{a}{b}")
             
     return digrams
+
+
+def GetPolybiusGrid(key):
+    grid = [[], [], [], [], []]
+    
+    for i in range(len(key)):
+        grid[i // 5].append(key[i])
+
+    return grid
+
+
+def GetPolybiusKey(grid):
+    key = ""
+    
+    for row in grid:
+        for item in row:
+            key += item
+    
+    return key
     
     

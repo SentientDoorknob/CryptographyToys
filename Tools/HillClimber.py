@@ -1,5 +1,5 @@
 import time
-import Interface.InputSubstitution
+import Interface.InputHillclimber
 from Decoders.Substitution.SubstitutionDecoder import SubstitutionDecoder
 
 global_result = None
@@ -20,7 +20,7 @@ def OpenCipherInput(module, loop=None, gen_new=False):
     global global_result
 
     if global_result is None or gen_new:
-        Interface.InputSubstitution.OpenInput(module, loop)
+        Interface.InputHillclimber.OpenInput(module, loop)
         return
 
     global_result.Display(loop)

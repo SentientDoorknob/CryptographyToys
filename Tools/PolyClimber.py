@@ -1,5 +1,5 @@
 from Decoders.PolySubstitution.PolySubstitutionDecoder import PolySubstitutionDecoder
-import Interface.InputSubstitution
+import Interface.InputHillclimber
 
 global_result=None
 decoder = PolySubstitutionDecoder()

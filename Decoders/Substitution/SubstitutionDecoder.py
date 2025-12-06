@@ -34,6 +34,7 @@ class SubstitutionDecoder:
         
         return self.encoder.Encode(ciphertext, parent)[1], parent, iterations
     
+    
     def Decode(self, ciphertext, max_iterations, threshold):
         text = StringFormat(ciphertext)
         plaintext, key, iterations = self.StochasticDecode(text, max_iterations, threshold)
